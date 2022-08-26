@@ -1,0 +1,32 @@
+
+ /* .envoltura {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}  */
+.div2 {
+    color: white;
+    
+      text-align: center;}
+    
+  
+ 
+   
+   .div1 {
+    border: 2px solid #e87867;
+    border-radius: 10px;
+    background-color: #3e3d3d;
+  
+    
+    background-image: url("/assets/imagenes/Pilotos_Carreras.jpg");
+    background-repeat: no-repeat;
+  
+    background-attachment:inherit;
+  
+    margin-left: 20px;
+  
+    width: 1440px;
+    height: 688px;   
+  
+    margin: 50px auto;
+    position: relative;
+    z-index: 0;}

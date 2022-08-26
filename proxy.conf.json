@@ -1,0 +1,19 @@
+{ 
+   
+   
+ 
+ "/modif/categorias": {
+            "target": "http://localhost:8080",
+            "secure": false,
+            "loglevel":"debug"
+              },           
+   
+
+                 
+"/delete/categorias/": {
+              "target": "http://localhost:8080",
+              "secure": false,
+              "loglevel":"debug"
+                            }  
+
+                        }

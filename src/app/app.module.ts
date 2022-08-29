@@ -10,8 +10,10 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 const routes: Routes = [
   {path:'categorias', component:CategoriasComponent},
+  {path:'sponsors', component:SponsorsComponent},
   {path:'home', component:HomeComponent},
   {path:'', redirectTo:'Home', pathMatch:'full'}
 ];
@@ -19,7 +21,8 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    CategoriasComponent
+    CategoriasComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,

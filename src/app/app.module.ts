@@ -9,6 +9,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
 const routes: Routes = [
   {path:'categorias', component:CategoriasComponent},
   {path:'home', component:HomeComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
+    NgxPaginationModule,
 
    
     HttpClientModule,

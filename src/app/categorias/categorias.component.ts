@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgModule, OnInit } from '@angular/core';
 import { Categorias } from './categorias';
 import { CategoriasService } from './categorias.service';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
 
 @Component({
   selector: 'app-categorias',
@@ -8,7 +11,7 @@ import { CategoriasService } from './categorias.service';
   styleUrls: ['./categorias.component.scss']
 })
 export class CategoriasComponent implements OnInit {
-
+  pages: number = 1;
   cat!: Categorias[];
   categ = {
     id:1,

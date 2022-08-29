@@ -21,8 +21,12 @@
     <p  ><mark class="col text-danger"><strong>Complete datos a modificar o presione borrar para quitar dato </strong></mark></p>
     <br>
     </div>
-    <div class="div2">
-    <tr *ngFor="let cate of cat">
+    
+    <div class="div2"
+    ><tr *ngFor="let cate of cat  | paginate: { itemsPerPage: 3, currentPage: pages }">
+   
+        
+    
   
      <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nombre  *: <input type="string" [(ngModel)]="cate.nombreCategoria">
         Ponderador         : <input type ="string" [(ngModel)] = "cate.ponderadorCategoria"> 
@@ -32,15 +36,15 @@
           <button (click)="delCategorias(cate); recargar()"  class="btn btn-outline-danger">Borrar dato </button></p>
        
           <br>
-       
+    
 
     </tr>
 
    
 
 </div>
-
-
+<pagination-controls (pageChange)="pages = $event"></pagination-controls>
+   
 
 
 

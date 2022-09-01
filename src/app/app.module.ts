@@ -11,9 +11,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SponsorsComponent } from './sponsors/sponsors.component';
+import { AutodromosComponent } from './autodromos/autodromos.component';
 const routes: Routes = [
   {path:'categorias', component:CategoriasComponent},
   {path:'sponsors', component:SponsorsComponent},
+  {path:'autodromos', component:AutodromosComponent},
   {path:'home', component:HomeComponent},
   {path:'', redirectTo:'Home', pathMatch:'full'}
 ];
@@ -22,7 +24,8 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     CategoriasComponent,
-    SponsorsComponent
+    SponsorsComponent,
+    AutodromosComponent
   ],
   imports: [
     BrowserModule,

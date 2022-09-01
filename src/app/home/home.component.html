@@ -4,6 +4,19 @@
         <br />
   
         <h6>HOME</h6>
+        <nav role="navigation">
+          <div id="menuToggle">
+              <input type="checkbox"/>
+              <span></span>
+              <span></span>
+              <span></span>
+              <ul id="menu">
+                  <li *ngFor="let option of options">
+                      <a>{{option}}</a>
+                  </li>
+              </ul>
+          </div>
+      </nav>
       </div>
     </div>
   </div>  

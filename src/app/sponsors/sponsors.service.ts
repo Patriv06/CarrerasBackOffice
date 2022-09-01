@@ -14,7 +14,7 @@ export class SponsorsService {
   private altaURL="http://localhost:8080/sponsors"
   spon = {
     id:1,
-    logoSponsor:" ",
+    logoSponsor:"",
     linkSponsor:" ",
     espacioSponsor:" ",
     

@@ -1,6 +1,6 @@
 export class Sponsors {
     id!: number;
-    logoSponsor!: string;
+    logoSponsor!: Blob;
     linkSponsor!: string;
     espacioSponsor!: string
 

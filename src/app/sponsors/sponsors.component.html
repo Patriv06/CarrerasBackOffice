@@ -1,11 +1,11 @@
-<div class="div1">
+<!-- <div class="div1">
     <div class="div2">
       <hr>
       <h3>Rankig Nacional de Pilotos / ABM Sponsors</h3>
       <hr>
       <p  ><mark class="col text-danger"><strong>Complete datos para alta</strong></mark></p>
       <br>
-      <p> Logo  * : <input type="string" [(ngModel)]="spon.logoSponsor">
+      <p> Logo  * : <input type="file" accept=".jpg,.png,.jpeg" [(ngModel)]="spon.logoSponsor">
       
        Link : <input type ="string" [(ngModel)] = "spon.linkSponsor"> 
       
@@ -44,3 +44,46 @@
   
   </div>
   <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+ -->
+
+
+ <div class="container row">
+  <div class="col-md-12">
+      <h1>Upload Image</h1>
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-6">
+      <input type="file" (change)="onFileChanged($event)">
+
+  </div>
+  <div class="col-md-6">
+      <input type="button" (click)="onUpload()" value="upload">
+  </div>
+</div>
+<hr />
+<div class="container row">
+  <div class="col-md-12">
+      <div *ngIf=message>{{message}}</div>
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-6">
+      <input type="text" class="form-control" id="name" placeholder="image name" [(ngModel)]="imageName"
+          name="name" />
+  </div>
+  <div class="col-md-6">
+      <input type="button" (click)="getImage()" value="Get Image">
+
+  </div>
+</div>
+
+<div class="container row">
+  <div class="col-md-12">
+      <div *ngIf=retrievedImage>
+          <img [src]="retrievedImage">
+      </div>
+  </div>
+</div>

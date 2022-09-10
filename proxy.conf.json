@@ -1,9 +1,19 @@
 { 
-   
+  "/ver/categorias": {
+    "target": "https://ranking-backoffice.web.app",
+    "secure": false,
+    "loglevel":"debug"
+      },       
+      
+      "/categorias": {
+        "target": "https://ranking-backoffice.web.app",
+        "secure": false,
+        "loglevel":"debug"
+          },             
    
  
  "/modif/categorias": {
-            "target": "http://localhost:8080",
+            "target": "https://ranking-backoffice.web.app",
             "secure": false,
             "loglevel":"debug"
               },           
@@ -11,7 +21,7 @@
 
                  
 "/delete/categorias/": {
-              "target": "http://localhost:8080",
+              "target": "https://ranking-backoffice.web.app/",
               "secure": false,
               "loglevel":"debug"
                             }  

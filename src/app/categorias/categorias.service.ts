@@ -8,10 +8,10 @@ import { Categorias } from './categorias';
 })
 export class CategoriasService {
 
-  private baseURL="http://localhost:8080/ver/categorias";
-  private modifURL ="http://localhost:8080/modif/categorias";
-  private delURL="http://localhost:8080/delete/categorias/";
-  private altaURL="http://localhost:8080/categorias"
+  private baseURL="https://back-ranking.azurewebsites.net/ver/categorias";
+  private modifURL ="https://back-ranking.azurewebsites.net/modif/categorias";
+  private delURL="https://back-ranking.azurewebsites.net/delete/categorias/";
+  private altaURL="https://back-ranking.azurewebsites.net/categorias"
   cat = {
     id:1,
     nombreCategoria:" ",

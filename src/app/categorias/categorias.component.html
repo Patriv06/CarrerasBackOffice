@@ -1,3 +1,4 @@
+
 <div class="div1">
   <div class="div2">
     <br>
@@ -5,13 +6,13 @@
     <br>
     <p  ><mark class="col text-danger"><strong>Complete datos para alta</strong></mark></p>
     <br>
-    <p> Nombre  * : <input type="string" [(ngModel)]="categ.nombreCategoria">
+    <p> {{categ.id}}&nbsp; &nbsp; &nbsp; &nbsp; Nombre  * : <input type="string" [(ngModel)]="categ.nombreCategoria">
     
      Ponderador : <input type ="string" [(ngModel)] = "categ.ponderadorCategoria"> 
     
      Link : <input type="string" [(ngModel)]="categ.linkCategoria"></p>
 
-    <p><button (click)="altaCategorias(categ); recargar()" class="btn btn-outline-success">Confirmar alta</button>
+    <p><button (click)="altaCategorias(categ)" class="btn btn-outline-success">Confirmar alta</button>
           
     </p>
      <br>
@@ -28,12 +29,12 @@
         
     
   
-     <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nombre  *: <input type="string" [(ngModel)]="cate.nombreCategoria">
+     <p>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{{categ.id}}&nbsp; &nbsp; &nbsp; &nbsp;  Nombre  *: <input type="string" [(ngModel)]="cate.nombreCategoria">
         Ponderador         : <input type ="string" [(ngModel)] = "cate.ponderadorCategoria"> 
          Link : <input type="string" [(ngModel)]="cate.linkCategoria">&nbsp;
 
-        <button (click)="modifCategorias(cate); recargar()" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
-          <button (click)="delCategorias(cate); recargar()"  class="btn btn-outline-danger">Borrar dato </button></p>
+        <button (click)="modifCategorias(cate)" class="btn btn-outline-primary">Confirmar modificación</button> &nbsp;
+          <button (click)="delCategorias(cate)"  class="btn btn-outline-danger">Borrar dato </button></p>
        
           <br>
     

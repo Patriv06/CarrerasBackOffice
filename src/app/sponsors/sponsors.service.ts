@@ -8,17 +8,12 @@ import { Sponsors } from './sponsors';
 })
 export class SponsorsService {
 
-  private baseURL="http://localhost:8080/ver/sponsors";
-  private modifURL ="http://localhost:8080/modif/sponsors";
-  private delURL="http://localhost:8080/delete/sponsors/";
-  private altaURL="http://localhost:8080/sponsors"
-  spon = {
-    id:1,
-    logoSponsor:"",
-    linkSponsor:" ",
-    espacioSponsor:" ",
-    
-  }
+  private baseURL="https://back-ranking.azurewebsites.net/ver/sponsors";
+  private modifURL ="https://back-ranking.azurewebsites.net/modif/sponsors";
+  private delURL="https://back-ranking.azurewebsites.net/delete/sponsors/";
+  private altaURL="https://back-ranking.azurewebsites.net/Sponsors"
+ 
+  
 
   constructor(private httpClient:HttpClient) { }
   
@@ -39,7 +34,7 @@ export class SponsorsService {
 
   borrarSponsors(sponsors:Sponsors){
    
-   return this.httpClient.delete<Sponsors>(this.delURL+ sponsors.id)
+   return this.httpClient.delete<Sponsors>(this.delURL+ sponsors.sponsorsid)
 
 
 
@@ -50,5 +45,6 @@ export class SponsorsService {
     return this.httpClient.post<Sponsors>(`${this.altaURL}`, sponsors)
   
   }
+ 
 
 }

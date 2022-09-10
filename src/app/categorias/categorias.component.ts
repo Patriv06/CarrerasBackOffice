@@ -30,13 +30,15 @@ export class CategoriasComponent implements OnInit {
   
   }
   
-  private traerCategorias(){
+  public traerCategorias(){
    this.categoriasServicio.obtenerCategorias().subscribe(dato =>{this.cat = dato})
-   
+   var x = this.categ.id
+    
     console.log(this.cat);
     }
     public modifCategorias(cat:Categorias){
       if (cat.nombreCategoria != " "){
+        cat.id = Math.floor(Math.random()*( cat.id  +1))
         this.categoriasServicio.modificarCategorias(cat).subscribe(()=>this.traerCategorias());
       }
       else{  alert("El nombre no puede estar en blanco")}
@@ -49,8 +51,9 @@ export class CategoriasComponent implements OnInit {
      }
      public altaCategorias(catego:Categorias){
       if (catego.nombreCategoria != " "){
-      this.categoriasServicio.crearCategorias(catego).subscribe((dato: { id: number; nombreCategoria: string; ponderadorCategoria: number;linkCategoria: string}) =>{catego = dato});
-    
+        
+      this.categoriasServicio.crearCategorias(catego).subscribe((dato: { id: number; nombreCategoria: string; ponderadorCategoria: number;linkCategoria: string}) =>this.traerCategorias());
+     
       }
       else{  alert("El nombre no puede estar en blanco")}
     }

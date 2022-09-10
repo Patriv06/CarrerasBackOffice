@@ -8,10 +8,10 @@ import { Autodromos } from './autodromos';
 })
 export class AutodromosService {
 
-  private baseURL="http://localhost:8080/ver/autodromo";
-  private modifURL ="http://localhost:8080/modif/autodromo";
-  private delURL="http://localhost:8080/delete/autodromo/";
-  private altaURL="http://localhost:8080/autodromo"
+  private baseURL="https://back-ranking.azurewebsites.net/ver/autodromo";
+  private modifURL ="https://back-ranking.azurewebsites.net/modif/autodromo";
+  private delURL="https://back-ranking.azurewebsites.net/delete/autodromo/";
+  private altaURL="https://back-ranking.azurewebsites.net/autodromo"
   aut = {
     id:1,
     nombreAutodromo:" ",

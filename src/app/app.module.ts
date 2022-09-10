@@ -12,6 +12,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { AutodromosComponent } from './autodromos/autodromos.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+
+
 const routes: Routes = [
   {path:'categorias', component:CategoriasComponent},
   {path:'sponsors', component:SponsorsComponent},
@@ -32,12 +37,13 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule,
     NgxPaginationModule,
-
-   
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    
     CommonModule,
+         provideFirebaseApp(() => initializeApp(environment.firebase)),
+         provideStorage(() => getStorage()),
 
   ],
   providers: [],
